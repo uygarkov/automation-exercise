@@ -6,8 +6,8 @@ jobs:
     style_check:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3.3.0
-            - uses: actions/setup-python@4.5.0
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@4
               with:
                 python-version: '3.10'
             - name: "Install style checker"
@@ -18,8 +18,8 @@ jobs:
         needs: style_check
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3.3.0
-            - uses: actions/setup-python@4.5.0
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@4
               with:
                 python-version: '3.10'
             - name: "Install python dependencies"
@@ -31,7 +31,7 @@ jobs:
             - name: "Create coverage report"
               run: coverage report -m
             - name: "Upload report"
-              uses: actions/upload-artifact@v3.1.2
+              uses: actions/upload-artifact@v3
               with:
                 name: coverage_report
                 path: .coverage
@@ -41,19 +41,19 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - uses: actions/setup-python@4.5.0
+            - uses: actions/setup-python@4
               with:
                 python-version: '3.10'
             - name: "Install coverage"
               run: pip install -U coverage
             - name: "Download .coverage"
-              uses: actions/download-artifact@v3.0.2
+              uses: actions/download-artifact@v3
               with:
                 name: coverage_report
             - name: " Convert coverage report into XML"
               run: coverage xml
             - name: " Upload .xml file"
-              uses: actions/upload-artifact@v3.1.2
+              uses: actions/upload-artifact@v3
               with:
                 name: coverage_report
                 path: coverage_report.xml
