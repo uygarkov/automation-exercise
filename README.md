@@ -1,4 +1,4 @@
-[![automation-exercise-actions](https://github.com/uygarkov/automation-exercise/actions/workflows/testing.yml/badge.svg)](https://github.com/uygarkov/automation-exercise/actions/workflows/testing.yml)
+[![SSE CI/CD](https://github.com/uygarkov/automation-exercise/actions/workflows/testing.yml/badge.svg)](https://github.com/uygarkov/automation-exercise/actions/workflows/testing.yml)
 
 # Automation Exercise
 
