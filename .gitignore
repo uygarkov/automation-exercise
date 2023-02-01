@@ -1,0 +1,6 @@
+.coverage
+# coverage reports
+tests/
+.coverage
+.coverage.*
+.coverage_report.xml
