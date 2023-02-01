@@ -55,6 +55,6 @@ jobs:
             - name: " Upload .xml file"
               uses: actions/upload-artifact@v3
               with:
-                name: coverage_report
-                path: .xml
+                name: coverage_report.xml
+                path: coverage_report.xml
                 retention-days: 14
