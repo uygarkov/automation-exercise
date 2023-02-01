@@ -13,7 +13,7 @@ jobs:
             - name: "Install style checker"
               run: pip install black
             - name: "Run black"
-              run: black --check
+              run: black --check .
     test:
         needs: style_check
         runs-on: ubuntu-latest
